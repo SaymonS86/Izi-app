@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+body{
+    background: url(./assets/background.png) no-repeat top center/cover;
+    margin: 0;
+    height: 100vh;
+    padding: 15vh;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #ffffff 1px;
+    text-decoration: none;
+    padding: 16px 24px;
+}
+
+#container{
+    padding-top: 60px;
+    width: 360px;
+    margin: auto;
+    border: #ffffff solid 2px;
+}
+
+#person{
+    text-align: center;
+}
+
+#person img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#person p {
+    font-weight: 500;
+    line-height: 24px;
+}
