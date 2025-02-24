@@ -13,13 +13,27 @@ body{
     background: url(./assets/background.png) no-repeat top center/cover;
     margin: 0;
     height: 100vh;
-    padding: 20vh;
+    padding: 15vh;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #ffffff 1px;
+    text-decoration: none;
+    padding: 16px 24px;
 }
 
 #container{
+    padding-top: 60px;
     width: 360px;
-    border: 1px solid #ffffff;
     margin: auto;
+    border: #ffffff solid 2px;
 }
 
 #person{
