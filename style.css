@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+body{
+    background: url(./assets/background.png) no-repeat top center/cover;
+    margin: 0;
+    height: 100vh;
+    padding: 20vh;
+}
+
+#container{
+    width: 360px;
+    border: 1px solid #ffffff;
+    margin: auto;
+}
+
+#person{
+    text-align: center;
+}
+
+#person img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#person p {
+    font-weight: 500;
+    line-height: 24px;
+}
