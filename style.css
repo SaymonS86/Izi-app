@@ -1,85 +1,135 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --backgroud-image: url(./assets/dark.png);
-    --font-color: #ffffff;
-    --border-color: #ffffff80;
-    --border-color-hover: #ffffff;
-    --background-color: #ffffff1a;
-    --background-color-hover: #ffffff0d;
+:root {
+  --backgroud-image: url(./assets/dark.png);
+  --font-color: #ffffff;
+  --border-color: #ffffff80;
+  --border-color-hover: #ffffff;
+  --background-color: #ffffff1a;
+  --background-color-hover: #ffffff0d;
+  --switch-bg-url: url(./assets/moon.svg);
 }
 
-.light{
-    --backgroud-image: url(./assets/light.jpg);
-    --font-color: #000000;
-    --border-color: #03030380;
-    --border-color-hover: #000000;
-    --background-color: #ffffff1a;
-    --background-color-hover: #0000000d;
+.light {
+  --backgroud-image: url(./assets/light.jpg);
+  --font-color: #000000;
+  --border-color: #03030380;
+  --border-color-hover: #000000;
+  --background-color: #ffffff1a;
+  --background-color-hover: #0000000d;
+  --switch-bg-url: url(./assets/sun.svg);
 }
 
-body *{
-    font-family: 'Inter', sans-serif;
-    color: var(--font-color);
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--font-color);
 }
 
-body{
-    background: var(--backgroud-image) no-repeat top center/cover;
-    margin: 0;
-    padding-top: 5vh;
-    height: 100vh;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+body {
+  background: var(--backgroud-image) no-repeat top center/cover;
+  margin: 0;
+  padding: auto;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
-ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-ul li a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid var(--border-color) 1px;
-    border-radius: 8px;
-    text-decoration: none;
-    padding: 16px;
-    background: var(--background-color);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    transition: 0.5s;
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid var(--border-color) 1px;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 16px;
+  background: var(--background-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: 0.5s;
 }
 
-ul li a:hover{
-    background-color: var(--background-color-hover);
-    border-color: var(--border-color-hover);
+ul li a:hover {
+  background-color: var(--background-color-hover);
+  border-color: var(--border-color-hover);
 }
 
-#container{
-    padding: 10vh 2vh 10vh 2vh;
-    width: 50vh; 
-    margin: auto ;
+#container {
+  padding: 10vh 2vh 10vh 2vh;
+  width: 50vh;
+  margin: auto;
 }
 
-#person{
-    text-align: center;
+#person {
+  text-align: center;
 }
 
 #person img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 #person p {
-    margin: 15px;
-    font-weight: 500;
-    line-height: 24px;
+  margin: 15px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+#switch {
+  margin: 3vh auto;
+  width: 64px;
+  position: relative;
+}
+
+#switch span {
+  display: block;
+  background-color: var(--background-color);
+  border: var(--border-color) solid 1px;
+  height: 24px;
+  width: 64px;
+  border-radius: 25px;
+}
+
+#switch button {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: white var(--switch-bg-url) no-repeat center;
+  background-size: 18px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: 0.1s;
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+@media (max-width: 360px) {
+  #container {
+    width: 40vh;
+  }
+}
+
+@media (max-width: 300px) {
+  #container {
+    width: 30vh;
+  }
 }
