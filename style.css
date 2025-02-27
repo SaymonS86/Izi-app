@@ -12,6 +12,7 @@
   --background-color: #ffffff1a;
   --background-color-hover: #ffffff0d;
   --switch-bg-url: url(./assets/moon.svg);
+  --highlight: #ffffff7c;
 }
 
 .light {
@@ -22,6 +23,7 @@
   --background-color: #ffffff1a;
   --background-color-hover: #0000000d;
   --switch-bg-url: url(./assets/sun.svg);
+  --highlight: #0707077c;
 }
 
 body * {
@@ -114,12 +116,16 @@ ul li a:hover {
   background-size: 18px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  transition: 0.1s;
+  transition: 0.2s;
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover{
+  outline: 8px solid var(--highlight);
 }
 
 @media (max-width: 360px) {
@@ -131,5 +137,23 @@ ul li a:hover {
 @media (max-width: 300px) {
   #container {
     width: 30vh;
+  }
+}
+
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%; 
+  }  
+}
+
+@keyframes slide-back {
+  from{
+    left: 50%;
+  }  
+  to{
+    left: 0;
   }
 }
