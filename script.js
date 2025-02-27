@@ -3,6 +3,8 @@ function toggle() {
   html.classList.toggle("light");
 
   const img = document.querySelector("#person img");
+
+  
   if (html.classList.contains("light")) {
     img.setAttribute("src", "./assets/quikire2.jpg");
   } else {
